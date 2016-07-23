@@ -44,6 +44,9 @@ $ brew tap jkawamoto/gii
 $ brew install gii
 ```
 
+Compiled binaries are also available in
+Github's [release page](https://github.com/jkawamoto/gii/releases).
+
 
 # License
 This software is released under the MIT License, see [LICENSE](LICENSE).
