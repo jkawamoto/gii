@@ -21,9 +21,8 @@ release:
 
 .PHONY: get-deps
 get-deps:
-	go get -u github.com/jteeuwen/go-bindata/...
 	go get -d -t -v .
 
 .PHONY: test
-test: asset
+test:
 	go test -v ./...

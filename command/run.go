@@ -67,8 +67,8 @@ func cmdRun(gopath string) (err error) {
 
 }
 
-// SearchParallel is a go-routine searching repositories which doesn't belong to
-// golang project. It reads search roots from input channel, and write found
+// SearchParallel is a go-routine searching repositories which doesn't belong
+// to golang project. It reads search roots from input channel, and write found
 // reporitories to output channel. After putting all search roots to input,
 // users must close the input channel. When all search finish, the notification
 // will be put in done channel.
