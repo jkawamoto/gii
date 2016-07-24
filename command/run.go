@@ -21,6 +21,9 @@ import (
 	"github.com/urfave/cli"
 )
 
+// GoImportsIgnore defines the file name of .goimportsignore.
+const GoImportsIgnore = ".goimportsignore"
+
 // CmdRun parses options and run cmdRun.
 func CmdRun(c *cli.Context) error {
 
@@ -51,7 +54,7 @@ func cmdRun(gopath string) (err error) {
 	}
 	close(pathCh)
 
-	goimportsignore := filepath.Join(root, ".goimportsignore")
+	goimportsignore := filepath.Join(root, GoImportsIgnore)
 	defined, err := LoadIgnoredPaths(goimportsignore)
 	if err != nil {
 		return
@@ -66,9 +69,14 @@ func cmdRun(gopath string) (err error) {
 	for {
 		select {
 		case path := <-ignoreCh:
-			if _, exist := defined[path]; !exist {
-				fmt.Fprintln(fp, path)
-				fmt.Printf("Append %s\n", path)
+			rel, err := filepath.Rel(root, path)
+			if err != nil {
+				fmt.Println(err.Error())
+				continue
+			}
+			if _, exist := defined[rel]; !exist {
+				fmt.Fprintln(fp, rel)
+				fmt.Printf("Append %s\n", rel)
 			}
 		case <-done:
 			return nil
