@@ -76,7 +76,7 @@ func cmdRun(gopath string) (err error) {
 			}
 			if _, exist := defined[rel]; !exist {
 				fmt.Fprintln(fp, rel)
-				fmt.Printf("Append %s\n", rel)
+				fmt.Printf("Append %s\n", filepath.ToSlash(rel))
 			}
 		case <-done:
 			return nil
