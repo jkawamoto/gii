@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="https://jkawamoto.github.io/gii/">
+    <title></title>
+
+    
+    <link href="https://jkawamoto.github.io/gii/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="https://jkawamoto.github.io/gii/css/landing-page.css" rel="stylesheet">
+
+    
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <style>
+    .navbar {
+    border-color: #e7e7e7;
+}
+
+.content-section-a,
+footer,
+.navbar {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.navbar a:link,
+.navbar-default .navbar-nav>li>a {
+  color: #777;
+}
+
+.navbar a:hover,
+.navbar-default .navbar-nav>li>a:hover {
+  color: rgb(51, 51, 51);
+}
+
+.content-section-b {
+  background-color: white;
+  color: #333;
+}
+
+body {
+  color: rgb(51, 51, 51);
+}
+
+.header-container h1,
+.header-container h2,
+.header-container h3,
+.header-container h4 {
+  color: rgb(51, 51, 51);
+}
+
+  </style>
+
+</head>
+<body>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4734862314145555",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="page-scroll navbar-brand" href="#intro">gii</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a class="page-scroll" href="https://github.com/jkawamoto/gii">Github</a></li>
+                
+                
+                <li>
+                    <a class="page-scroll" href=https://www.jkawamoto.info/>Junpei Kawamoto</a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</nav>
+
+
+<section id="services">
+   <div class="content-section-a">
+
+      <div class="container">
+
+        <div class="row">
+          <div>
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading"></h2>
+            
+
+<p><a href="https://github.com/jkawamoto/gii/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="MIT License" /></a>
+<a href="https://travis-ci.org/jkawamoto/gii"><img src="https://travis-ci.org/jkawamoto/gii.svg?branch=master" alt="Build Status" /></a>
+<a href="https://codeclimate.com/github/jkawamoto/gii"><img src="https://codeclimate.com/github/jkawamoto/gii/badges/gpa.svg" alt="Code Climate" /></a>
+<a href="https://github.com/jkawamoto/gii/releases/tag/v0.1.2"><img src="https://img.shields.io/badge/release-0.1.2-lightgrey.svg" alt="Release" /></a>
+<a href="http://qiita.com/jkawamoto/items/e9d135e974a44dade715"><img src="https://img.shields.io/badge/qiita-%E6%97%A5%E6%9C%AC%E8%AA%9E-brightgreen.svg" alt="Japanese" /></a></p>
+
+<p>Set repositories which doesn&rsquo;t belong golang project to .goimportsignore.</p>
+
+<p>When you employ go-style directory tree<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup> to maintain all projects
+even if such projects are not written in golang,
+your <code>$GOPATH/src</code> has too many repositories and it makes <code>goimports</code> slower.
+<code>gii</code> lists up repositories which doesn&rsquo;t belong to golang projects from
+your <code>$GOPATH/src</code> and writes them to <code>.goimportsignore</code>,
+so that <code>goimports</code> doesn&rsquo;t search such repositories.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Run just <code>gii</code> if <code>$GOPATH</code> is set. If you want to use another root path,
+use <code>--gopath</code> flag.</p>
+
+<p><code>gii</code> appends paths of repositories which doesn&rsquo;t belong to golang projects,
+and aren&rsquo;t appeared <code>$GOPAH/.goimportsignore</code> already.
+To delete added paths, please edit <code>$GOPAH/.goimportsignore</code> manually.</p>
+
+<p>Here is the help text of <code>gii</code>:</p>
+
+<pre><code>gii [global options]
+
+GLOBAL OPTIONS:
+   --gopath GOPATH  GOPATH [$GOPATH]
+   --help, -h       show help
+   --version, -v    print the version
+</code></pre>
+
+<h2 id="installation">Installation</h2>
+
+<pre><code class="language-sh">$ go get github.com/jkawamoto/gii
+</code></pre>
+
+<p>or if you&rsquo;re <a href="http://brew.sh/">Homebrew</a> user,</p>
+
+<pre><code class="language-sh">$ brew tap jkawamoto/gii
+$ brew install gii
+</code></pre>
+
+<p>Compiled binaries are also available in
+Github&rsquo;s <a href="https://github.com/jkawamoto/gii/releases">release page</a>.</p>
+
+<h1 id="license">License</h1>
+
+<p>This software is released under the MIT License, see <a href="https://github.com/jkawamoto/gii/blob/master/LICENSE">LICENSE</a>.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="http://weblog.bulknews.net/post/89635306479/ghq-pecopercol">http://weblog.bulknews.net/post/89635306479/ghq-pecopercol</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p class="copyright text-muted small">Copyright &copy;  All Rights Reserved</p>
+            </div>
+            <div class="col-md-4">
+		Built with <a href="http://gohugo.io">Hugo</a> and the
+		<a href="https://github.com/swiftline/github-project-landing-page">Github project Page</a>
+		theme.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://jkawamoto.github.io/gii/js/jquery-2.2.0.min.js"></script>
+
+
+<script src="https://jkawamoto.github.io/gii/js/jquery.easing-1.3.min.js"></script>
+
+
+<script src="https://jkawamoto.github.io/gii/js/bootstrap.min.js"></script>
+
+
+<script src="https://jkawamoto.github.io/gii/js/landing-page.js"></script>
+
+
+
+
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+   Date();a=s.createElement(o),
+		                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-82315630-1', 'auto');
+ ga('send', 'pageview');
+</script>
+
+
+
+</body>
+</html>
+
