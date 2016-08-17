@@ -16,7 +16,7 @@
       <guid>https://jkawamoto.github.io/gii/README/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/jkawamoto/gii/blob/master/LICENSE&#34;&gt;&lt;img src=&#34;http://img.shields.io/badge/license-MIT-blue.svg?style=flat&#34; alt=&#34;MIT License&#34; /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jkawamoto/gii/blob/master/LICENSE&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/license-MIT-blue.svg?style=flat&#34; alt=&#34;MIT License&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://travis-ci.org/jkawamoto/gii&#34;&gt;&lt;img src=&#34;https://travis-ci.org/jkawamoto/gii.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://codeclimate.com/github/jkawamoto/gii&#34;&gt;&lt;img src=&#34;https://codeclimate.com/github/jkawamoto/gii/badges/gpa.svg&#34; alt=&#34;Code Climate&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://github.com/jkawamoto/gii/releases/tag/v0.1.2&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/release-0.1.2-lightgrey.svg&#34; alt=&#34;Release&#34; /&gt;&lt;/a&gt;
@@ -24,14 +24,14 @@
 
 &lt;p&gt;Set repositories which doesn&amp;rsquo;t belong golang project to .goimportsignore.&lt;/p&gt;
 
-&lt;p&gt;When you employ go-style directory tree&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to maintain all projects
+&lt;p&gt;When you employ go-style directory tree&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to maintain all projects
 even if such projects are not written in golang,
 your &lt;code&gt;$GOPATH/src&lt;/code&gt; has too many repositories and it makes &lt;code&gt;goimports&lt;/code&gt; slower.
 &lt;code&gt;gii&lt;/code&gt; lists up repositories which doesn&amp;rsquo;t belong to golang projects from
 your &lt;code&gt;$GOPATH/src&lt;/code&gt; and writes them to &lt;code&gt;.goimportsignore&lt;/code&gt;,
 so that &lt;code&gt;goimports&lt;/code&gt; doesn&amp;rsquo;t search such repositories.&lt;/p&gt;
 
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;h2 id=&#34;usage:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;p&gt;Run just &lt;code&gt;gii&lt;/code&gt; if &lt;code&gt;$GOPATH&lt;/code&gt; is set. If you want to use another root path,
 use &lt;code&gt;--gopath&lt;/code&gt; flag.&lt;/p&gt;
@@ -50,7 +50,7 @@ GLOBAL OPTIONS:
    --version, -v    print the version
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;installation:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Installation&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ go get github.com/jkawamoto/gii
 &lt;/code&gt;&lt;/pre&gt;
@@ -64,7 +64,7 @@ $ brew install gii
 &lt;p&gt;Compiled binaries are also available in
 Github&amp;rsquo;s &lt;a href=&#34;https://github.com/jkawamoto/gii/releases&#34;&gt;release page&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;license&#34;&gt;License&lt;/h1&gt;
+&lt;h1 id=&#34;license:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;License&lt;/h1&gt;
 
 &lt;p&gt;This software is released under the MIT License, see &lt;a href=&#34;https://github.com/jkawamoto/gii/blob/master/LICENSE&#34;&gt;LICENSE&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
@@ -72,8 +72,8 @@ Github&amp;rsquo;s &lt;a href=&#34;https://github.com/jkawamoto/gii/releases&#34
 &lt;hr /&gt;
 
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;http://weblog.bulknews.net/post/89635306479/ghq-pecopercol&#34;&gt;http://weblog.bulknews.net/post/89635306479/ghq-pecopercol&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;&lt;a href=&#34;http://weblog.bulknews.net/post/89635306479/ghq-pecopercol&#34;&gt;http://weblog.bulknews.net/post/89635306479/ghq-pecopercol&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
