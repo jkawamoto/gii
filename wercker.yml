@@ -1,0 +1,20 @@
+box: jkawamoto/ghp-box
+build:
+  steps:
+    - script:
+        name: Prepare submodules
+        code: |-
+          git submodule update --init
+    - arjen/hugo-build:
+        version: "0.15"
+        basedir: docs
+deploy:
+  steps:
+    - jkawamoto/ghp-import:
+        token: $GIT_TOKEN
+        basedir: docs/public
+  after-steps:
+    - kobim/notify-pushover:
+        token: $PUSHOVER_APP_TOKEN
+        user: $PUSHOVER_USER_TOKEN
+        title: Finish deploying gii

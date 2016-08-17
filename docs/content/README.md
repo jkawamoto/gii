@@ -1,6 +1,6 @@
 ---
 ---
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/jkawamoto/gii/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/jkawamoto/gii/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/jkawamoto/gii.svg?branch=master)](https://travis-ci.org/jkawamoto/gii)
 [![Code Climate](https://codeclimate.com/github/jkawamoto/gii/badges/gpa.svg)](https://codeclimate.com/github/jkawamoto/gii)
 [![Release](https://img.shields.io/badge/release-0.1.2-lightgrey.svg)](https://github.com/jkawamoto/gii/releases/tag/v0.1.2)
