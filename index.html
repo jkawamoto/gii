@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <base href="https://jkawamoto.github.io/gii/">
+  <title>gii</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <base href="https://jkawamoto.github.io/gii/">
-    <title>gii</title>
+  
+  <link href="https://jkawamoto.github.io/gii/css/bootstrap.min.css" rel="stylesheet">
 
-    
-    <link href="https://jkawamoto.github.io/gii/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/remodal.css">
+  <link rel="stylesheet" href="css/remodal-default-theme.css">
+  <link href="https://jkawamoto.github.io/gii/css/landing-page.css" rel="stylesheet">
 
-    
-    <link href="https://jkawamoto.github.io/gii/css/landing-page.css" rel="stylesheet">
+  
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <style>
+  <style>
     .navbar {
     border-color: #e7e7e7;
 }
@@ -58,11 +59,11 @@ body {
 }
 
   </style>
-
 </head>
-<body>
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <body>
+    <div class="remodal-bg">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-4734862314145555",
@@ -100,7 +101,7 @@ body {
     
 </nav>
 
-<section id="intro">
+      <section id="intro">
 	
 	<div class="intro-header">
 
@@ -132,7 +133,7 @@ body {
 	
 </section>
 
-<section id="services">
+      <section id="services">
 
 
  
@@ -153,7 +154,8 @@ body {
 <a href="https://travis-ci.org/jkawamoto/gii"><img src="https://travis-ci.org/jkawamoto/gii.svg?branch=master" alt="Build Status" /></a>
 <a href="https://codeclimate.com/github/jkawamoto/gii"><img src="https://codeclimate.com/github/jkawamoto/gii/badges/gpa.svg" alt="Code Climate" /></a>
 <a href="https://github.com/jkawamoto/gii/releases/tag/v0.1.2"><img src="https://img.shields.io/badge/release-0.1.2-lightgrey.svg" alt="Release" /></a>
-<a href="http://qiita.com/jkawamoto/items/e9d135e974a44dade715"><img src="https://img.shields.io/badge/qiita-%E6%97%A5%E6%9C%AC%E8%AA%9E-brightgreen.svg" alt="Japanese" /></a></p>
+<a href="http://qiita.com/jkawamoto/items/e9d135e974a44dade715"><img src="https://img.shields.io/badge/qiita-%E6%97%A5%E6%9C%AC%E8%AA%9E-brightgreen.svg" alt="Japanese" /></a>
+<a href="#" data-remodal-target="wallet"><img src="https://img.shields.io/badge/donate-bitcoin-yellow.svg"/></a></p>
 
 <p>Set repositories which doesn&rsquo;t belong golang project to .goimportsignore.</p>
 
@@ -221,19 +223,19 @@ Github&rsquo;s <a href="https://github.com/jkawamoto/gii/releases">release page<
 
 </section>
 
-<div class="content-section-a">
-  <div class="container">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4734862314145555"
-         data-ad-slot="6910324227"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-</div>
-
+      <div class="content-section-a">
+        <div class="container">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-4734862314145555"
+               data-ad-slot="6910324227"
+               data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+      
 <footer>
     <div class="container">
         <div class="row">
@@ -279,6 +281,20 @@ Github&rsquo;s <a href="https://github.com/jkawamoto/gii/releases">release page<
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57f529147128b1fb"></script>
 
-</body>
-</html>
+    </div>
+    <div class="remodal" data-remodal-id="wallet">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>Bitcoin wallet</h1>
+  <p>
+    Wallet address:
+    <span>1625kBbXoGRWRh92XcgLFik5E6PgV482sm</span>
+    <br/>
+    <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=bitcoin:1625kBbXoGRWRh92XcgLFik5E6PgV482sm"/>
+  </p>
+  <br/>
+  <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+</div>
+<script src="js/remodal.min.js"></script>
 
+  </body>
+</html>
