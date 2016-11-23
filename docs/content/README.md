@@ -5,6 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/jkawamoto/gii/badges/gpa.svg)](https://codeclimate.com/github/jkawamoto/gii)
 [![Release](https://img.shields.io/badge/release-0.1.2-lightgrey.svg)](https://github.com/jkawamoto/gii/releases/tag/v0.1.2)
 [![Japanese](https://img.shields.io/badge/qiita-%E6%97%A5%E6%9C%AC%E8%AA%9E-brightgreen.svg)](http://qiita.com/jkawamoto/items/e9d135e974a44dade715)
+<a href="#" data-remodal-target="wallet"><img src="https://img.shields.io/badge/donate-bitcoin-yellow.svg"/></a>
 
 Set repositories which doesn't belong golang project to .goimportsignore.
 
