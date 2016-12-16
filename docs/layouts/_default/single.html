@@ -2,12 +2,18 @@
 <html>
   {{ partial "head.html" . }}
   <body>
-    <div class="remodal-bg">
-      {{ partial "nav.html" . }}
-      {{ partial "header.html" . }}
-      {{ partial "services.html" . }}
+    {{ partial "nav.html" . }}
+    <section id="services">
       <div class="content-section-a">
         <div class="container">
+          <div class="row">
+            <div>
+              <hr class="section-heading-spacer">
+              <div class="clearfix"></div>
+              <h2 class="section-heading">{{ .Title }}</h2>
+              {{ .Content }}
+            </div>
+          </div>
           <div class="row">
             {{ "<!-- AdSense -->" | safeHTML }}
             <ins class="adsbygoogle"
@@ -27,8 +33,7 @@
           </div>
         </div>
       </div>
-      {{ partial "footer.html" . }}
-    </div>
-    {{ partial "wallet.html" . }}
+    </section>
+    {{ partial "footer.html" . }}
   </body>
 </html>

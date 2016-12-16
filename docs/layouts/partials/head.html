@@ -2,21 +2,43 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
   <base href="{{ .Site.BaseURL }}">
-  <title>{{ .Title }}</title>
+  <title>{{ .Title }}: {{ .Site.Params.SubTitle }}</title>
 
-  <!-- Bootstrap Core CSS -->
-  <link href="{{ .Site.BaseURL }}css/bootstrap.min.css" rel="stylesheet">
+  <meta name="author" content="{{ with .Site.Params.AuthorName }}{{ . }}{{ end }}"/>
+  {{ if isset .Params "description" }}
+  <meta name="description" content="{{ .Params.description }}"/>
+  {{ else }}
+  <meta name="description" content="{{ with .Site.Params.Description }}{{ . }}{{ end }}"/>
+  {{ end }}
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/remodal.css">
-  <link rel="stylesheet" href="css/remodal-default-theme.css">
-  <link href="{{ .Site.BaseURL }}css/landing-page.css" rel="stylesheet">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ .Title }}: {{ .Site.Params.SubTitle }}" />
+  {{ if isset .Params "description" }}
+  <meta name="og:description" content="{{ .Params.description }}" />
+  {{ else }}
+  <meta name="og:description" content="{{ with .Site.Params.Description }}{{ . }}{{ end }}" />
+  {{ end }}
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/image.png" />
+  <meta property="og:site_name"  content="{{ .Title }}: {{ .Site.Params.SubTitle }}" />
 
-  <!-- Custom Fonts -->
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  {{ if isset .Params "description" }}
+  <meta name="twitter:card" content="{{ .Params.description }}" />
+  {{ else }}
+  <meta name="twitter:card" content="{{ with .Site.Params.Description }}{{ . }}{{ end }}" />
+  {{ end }}
+  <meta name="twitter:site" content="@junkawamoto" />
+
+  {{ "<!-- Bootstrap Core CSS -->" | safeHTML }}
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  {{ "<!-- Custom CSS -->" | safeHTML }}
+  <link rel="stylesheet" href="css/remodal.css"/>
+  <link rel="stylesheet" href="css/remodal-default-theme.css"/>
+  <link rel="stylesheet" href="css/landing-page.css"/>
+
+  {{ "<!-- Custom Fonts -->" | safeHTML }}
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
   <style>
     {{ printf "%v" (partial "template.css" . ) | safeCSS  }}
