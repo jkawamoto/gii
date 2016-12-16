@@ -7,10 +7,6 @@ import (
 	"testing"
 )
 
-func TestCmdRun(t *testing.T) {
-	// Write your code here
-}
-
 func TestLoadIgnoredPaths(t *testing.T) {
 
 	dir, err := ioutil.TempDir("", "test-load-ignore-paths")
