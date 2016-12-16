@@ -6,40 +6,42 @@
     <description>Recent content on gii</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 16 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jkawamoto.github.io/gii/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
-      <link>https://jkawamoto.github.io/gii/README/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Gii: Reduce Go import paths</title>
+      <link>https://jkawamoto.github.io/gii/readme/</link>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jkawamoto.github.io/gii/README/</guid>
+      <guid>https://jkawamoto.github.io/gii/readme/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/jkawamoto/gii/blob/master/LICENSE&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/license-MIT-blue.svg?style=flat&#34; alt=&#34;MIT License&#34; /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;info/licenses/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/license-MIT-blue.svg?style=flat&#34; alt=&#34;MIT License&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://travis-ci.org/jkawamoto/gii&#34;&gt;&lt;img src=&#34;https://travis-ci.org/jkawamoto/gii.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://codeclimate.com/github/jkawamoto/gii&#34;&gt;&lt;img src=&#34;https://codeclimate.com/github/jkawamoto/gii/badges/gpa.svg&#34; alt=&#34;Code Climate&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;https://github.com/jkawamoto/gii/releases/tag/v0.1.2&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/release-0.1.2-lightgrey.svg&#34; alt=&#34;Release&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;http://qiita.com/jkawamoto/items/e9d135e974a44dade715&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/qiita-%E6%97%A5%E6%9C%AC%E8%AA%9E-brightgreen.svg&#34; alt=&#34;Japanese&#34; /&gt;&lt;/a&gt;
 &lt;a href=&#34;#&#34; data-remodal-target=&#34;wallet&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/donate-bitcoin-yellow.svg&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Set repositories which doesn&amp;rsquo;t belong golang project to .goimportsignore.&lt;/p&gt;
+&lt;p&gt;Add not &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; project repositories to &lt;code&gt;.goimportsignore&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;When you employ go-style directory tree&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to maintain all projects
-even if such projects are not written in golang,
-your &lt;code&gt;$GOPATH/src&lt;/code&gt; has too many repositories and it makes &lt;code&gt;goimports&lt;/code&gt; slower.
-&lt;code&gt;gii&lt;/code&gt; lists up repositories which doesn&amp;rsquo;t belong to golang projects from
-your &lt;code&gt;$GOPATH/src&lt;/code&gt; and writes them to &lt;code&gt;.goimportsignore&lt;/code&gt;,
-so that &lt;code&gt;goimports&lt;/code&gt; doesn&amp;rsquo;t search such repositories.&lt;/p&gt;
+&lt;p&gt;When you employ go-style directory tree&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; to maintain all repositories on your
+local environment, your &lt;code&gt;$GOPATH/src&lt;/code&gt; might have many repositories even if they
+aren&amp;rsquo;t written in Go, and hence &lt;code&gt;goimports&lt;/code&gt; becomes slower.&lt;/p&gt;
 
-&lt;h2 id=&#34;usage:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;gii&lt;/code&gt; lists up repositories which aren&amp;rsquo;t Go projects from your &lt;code&gt;$GOPATH/src&lt;/code&gt;
+and writes them to &lt;code&gt;.goimportsignore&lt;/code&gt; so that &lt;code&gt;goimports&lt;/code&gt; can ignore those
+repositories.&lt;/p&gt;
 
-&lt;p&gt;Run just &lt;code&gt;gii&lt;/code&gt; if &lt;code&gt;$GOPATH&lt;/code&gt; is set. If you want to use another root path,
-use &lt;code&gt;--gopath&lt;/code&gt; flag.&lt;/p&gt;
+&lt;h3 id=&#34;usage:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Usage&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;gii&lt;/code&gt; appends paths of repositories which doesn&amp;rsquo;t belong to golang projects,
-and aren&amp;rsquo;t appeared &lt;code&gt;$GOPAH/.goimportsignore&lt;/code&gt; already.
-To delete added paths, please edit &lt;code&gt;$GOPAH/.goimportsignore&lt;/code&gt; manually.&lt;/p&gt;
+&lt;p&gt;Run just &lt;code&gt;gii&lt;/code&gt; if environment variable &lt;code&gt;$GOPATH&lt;/code&gt; is defined.
+If you want to use another root path, use &lt;code&gt;--gopath&lt;/code&gt; flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gii&lt;/code&gt; appends paths of repositories which aren&amp;rsquo;t Go projects
+but haven&amp;rsquo;t been added in &lt;code&gt;$GOPAH/.goimportsignore&lt;/code&gt; yet.
+To delete paths from &lt;code&gt;.goimportsignore&lt;/code&gt;, edit that file manually.&lt;/p&gt;
 
 &lt;p&gt;Here is the help text of &lt;code&gt;gii&lt;/code&gt;:&lt;/p&gt;
 
@@ -51,23 +53,23 @@ GLOBAL OPTIONS:
    --version, -v    print the version
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;installation:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;installation:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;Installation&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ go get github.com/jkawamoto/gii
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;or if you&amp;rsquo;re &lt;a href=&#34;http://brew.sh/&#34;&gt;Homebrew&lt;/a&gt; user,&lt;/p&gt;
+&lt;p&gt;or if you&amp;rsquo;re a &lt;a href=&#34;http://brew.sh/&#34;&gt;Homebrew&lt;/a&gt; user,&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ brew tap jkawamoto/gii
 $ brew install gii
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Compiled binaries are also available in
-Github&amp;rsquo;s &lt;a href=&#34;https://github.com/jkawamoto/gii/releases&#34;&gt;release page&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/jkawamoto/gii/releases&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;license:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;License&lt;/h1&gt;
+&lt;h3 id=&#34;license:04c6e90faac2675aa89e2176d2eec7d8&#34;&gt;License&lt;/h3&gt;
 
-&lt;p&gt;This software is released under the MIT License, see &lt;a href=&#34;https://github.com/jkawamoto/gii/blob/master/LICENSE&#34;&gt;LICENSE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This software is released under the MIT License, see &lt;a href=&#34;info/licenses/&#34;&gt;LICENSE&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 
 &lt;hr /&gt;
@@ -77,6 +79,69 @@ Github&amp;rsquo;s &lt;a href=&#34;https://github.com/jkawamoto/gii/releases&#34
  &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:04c6e90faac2675aa89e2176d2eec7d8:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Licenses</title>
+      <link>https://jkawamoto.github.io/gii/info/licenses/</link>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jkawamoto.github.io/gii/info/licenses/</guid>
+      <description>
+
+&lt;p&gt;This software is released under the MIT License.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;The MIT License (MIT)
+
+Copyright (c) 2016 Junpei Kawamoto
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;notices-for-libraries:066a44a3ef946eeb40375cef0248ec8a&#34;&gt;Notices for libraries&lt;/h2&gt;
+
+&lt;p&gt;This software uses the following open source libraries:&lt;/p&gt;
+
+&lt;h3 id=&#34;cli-https-github-com-urfave-cli:066a44a3ef946eeb40375cef0248ec8a&#34;&gt;&lt;a href=&#34;https://github.com/urfave/cli&#34;&gt;cli&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Copyright &amp;copy; 2016 Jeremy Saenz &amp;amp; Contributors&lt;/p&gt;
+
+&lt;p&gt;Licensed under the MIT License.&lt;/p&gt;
+
+&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:&lt;/p&gt;
+
+&lt;p&gt;The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.&lt;/p&gt;
+
+&lt;p&gt;THE SOFTWARE IS PROVIDED &amp;ldquo;AS IS&amp;rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.&lt;/p&gt;
 </description>
     </item>
     
