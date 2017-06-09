@@ -1,6 +1,6 @@
 baseurl = "https://jkawamoto.github.io/gii/"
 languageCode = "en-us"
-title = "gii"
+title = "Gii"
 theme = "github-project-landing-page"
 
 [params]

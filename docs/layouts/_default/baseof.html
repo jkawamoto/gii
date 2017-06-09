@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head" . }}
+  <body>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4734862314145555",
+        enable_page_level_ads: true
+      });
+    </script>
+    <div class="remodal-bg">
+      {{ partial "nav" . }}
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer" . }}
+    </div>
+    {{ partial "wallet.html" . }}
+  </body>
+</html>
