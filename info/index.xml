@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Infos on gii</title>
-    <link>https://jkawamoto.github.io/gii/info/</link>
-    <description>Recent content in Infos on gii</description>
+    <title>Infos on Gii</title>
+    <link>https://jkawamoto.github.io/gii/info/index.xml</link>
+    <description>Recent content in Infos on Gii</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 16 Dec 2016 00:00:00 +0000</lastBuildDate>
@@ -19,7 +19,7 @@
 
 &lt;p&gt;This software is released under the MIT License.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;The MIT License (MIT)
+&lt;pre&gt;&lt;code class=&#34;language-txt&#34;&gt;The MIT License (MIT)
 
 Copyright (c) 2016 Junpei Kawamoto
 
@@ -42,11 +42,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;notices-for-libraries:066a44a3ef946eeb40375cef0248ec8a&#34;&gt;Notices for libraries&lt;/h2&gt;
+&lt;h2 id=&#34;notices-for-libraries&#34;&gt;Notices for libraries&lt;/h2&gt;
 
 &lt;p&gt;This software uses the following open source libraries:&lt;/p&gt;
 
-&lt;h3 id=&#34;cli-https-github-com-urfave-cli:066a44a3ef946eeb40375cef0248ec8a&#34;&gt;&lt;a href=&#34;https://github.com/urfave/cli&#34;&gt;cli&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;cli-https-github-com-urfave-cli&#34;&gt;&lt;a href=&#34;https://github.com/urfave/cli&#34;&gt;cli&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Copyright &amp;copy; 2016 Jeremy Saenz &amp;amp; Contributors&lt;/p&gt;
 
