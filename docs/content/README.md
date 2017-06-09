@@ -38,7 +38,7 @@ but haven't been added in `$GOPAH/.goimportsignore` yet.
 To delete paths from `.goimportsignore`, edit that file manually.
 
 Here is the help text of `gii`:
-~~~
+~~~shell
 gii [global options]
 
 GLOBAL OPTIONS:
@@ -49,17 +49,21 @@ GLOBAL OPTIONS:
 
 
 ### Installation
-```sh
+To build the newest version of Gii, use go get command:
+
+```shell
 $ go get github.com/jkawamoto/gii
 ```
-or if you're a [Homebrew](http://brew.sh/) user,
 
-```sh
+If you're a [Homebrew](http://brew.sh/) user,
+you can install Gii by the following commands:
+
+```shell
 $ brew tap jkawamoto/gii
 $ brew install gii
 ```
 
-Compiled binaries are also available in
+Otherwise, compiled binaries are also available in
 [Github](https://github.com/jkawamoto/gii/releases).
 
 
