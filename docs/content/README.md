@@ -5,7 +5,7 @@ description: >-
   and writes them to .goimportsignore so that goimports can ignore those
   repositories.
 date: 2016-12-16
-lastmod: 2016-12-16
+lastmod: 2017-06-14
 slug: readme
 ---
 

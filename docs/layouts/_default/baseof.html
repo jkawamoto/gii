@@ -2,18 +2,21 @@
 <html>
   {{ partial "head" . }}
   <body>
+    {{ with .Site.Params.GoogleAdSenseClient }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-4734862314145555",
+        google_ad_client: "{{ . }}",
         enable_page_level_ads: true
       });
     </script>
+    {{ end }}
     <div class="remodal-bg">
       {{ partial "nav" . }}
       {{ block "main" . }}{{ end }}
       {{ partial "footer" . }}
     </div>
-    {{ partial "wallet.html" . }}
+    {{ partial "js" . }}
+    {{ partial "wallet" . }}
   </body>
 </html>
